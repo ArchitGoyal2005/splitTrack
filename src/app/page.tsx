@@ -1,3 +1,9 @@
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <div>
+        <div className="container mx-auto px-4 sm:px-8">hi</div>
+      </div>
+    </>
+  );
 }

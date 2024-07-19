@@ -1,9 +1,16 @@
+
+import React from "react";
+import sideMenu from "@/components/sideMenu";
+
+
+
+
 export default function Home() {
   return (
-    <>
+    <main>
       <div>
-        <div className="container mx-auto px-4 sm:px-8">hi</div>
+        <sideMenu/>
       </div>
-    </>
+    </main>
   );
 }

@@ -1,16 +1,10 @@
-
+import SideMenu from "@/components/SideMenu";
 import React from "react";
-import sideMenu from "@/components/sideMenu";
-
-
-
 
 export default function Home() {
   return (
     <main>
-      <div>
-        <sideMenu/>
-      </div>
+      <SideMenu />
     </main>
   );
 }

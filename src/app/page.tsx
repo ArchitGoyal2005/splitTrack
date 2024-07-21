@@ -1,4 +1,4 @@
-import SideMenu from "@/components/SideMenu";
+import SideMenu from "@/components/sideMenu";
 import React from "react";
 
 export default function Home() {

@@ -6,8 +6,6 @@ function Home() {
   return (
     <main>
       <SideMenu />
-
-      
     </main>
   );
 }

@@ -5,9 +5,9 @@ import { UserButton } from "@clerk/nextjs";
 function Home() {
   return (
     <main>
-      <SideMenu />
-
-      
+      <div>
+        <SideMenu />
+      </div>
     </main>
   );
 }

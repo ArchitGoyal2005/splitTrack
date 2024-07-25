@@ -93,4 +93,5 @@ function SideMenu() {
     </div>
   );
 }
+
 export default SideMenu;

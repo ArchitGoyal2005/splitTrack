@@ -1,6 +1,6 @@
 import React from "react";
 
-function sideMenu() {
+function SideMenu() {
   return (
     <div className="w-full h-full">
       <button
@@ -429,7 +429,7 @@ function sideMenu() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default sideMenu;
+export default SideMenu;

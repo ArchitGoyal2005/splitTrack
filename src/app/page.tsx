@@ -1,16 +1,12 @@
-
+import SideMenu from "@/components/sideMenu";
 import React from "react";
-import sideMenu from "@/components/sideMenu";
+import { UserButton } from "@clerk/nextjs";
 
-
-
-
-export default function Home() {
+function Home() {
   return (
     <main>
-      <div>
-        <sideMenu/>
-      </div>
+      <SideMenu />
     </main>
   );
 }
+export default Home;

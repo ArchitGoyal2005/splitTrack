@@ -20,12 +20,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={
-            inter.className + "flex flex-col bg-gray-50 dark:bg-gray-800"
-          }
+          className={`${inter.className} flex flex-col w-full h-full bg-zinc-900`}
         >
-          <SideMenu />
-          {children}
+          <div className="flex flex-row w-full h-full">
+            <SideMenu />
+            <main className="flex-grow p-4">{children}</main>
+          </div>
         </body>
       </html>
     </ClerkProvider>

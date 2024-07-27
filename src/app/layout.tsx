@@ -24,7 +24,7 @@ export default function RootLayout({
         >
           <div className="flex flex-row w-full h-full">
             <SideMenu />
-            <main className="flex-grow p-4">{children}</main>
+            <main className="flex-grow py-4 pr-3">{children}</main>
           </div>
         </body>
       </html>

@@ -1,12 +1,13 @@
 import React, { Children } from "react";
 import { UserButton, SignOutButton } from "@clerk/nextjs";
 import { FaSignOutAlt, FaUserFriends } from "react-icons/fa";
-import { SiGoogleanalytics } from "react-icons/si";
+import { SiGoogleanalytics, SiWebmoney } from "react-icons/si";
 import { IoHomeSharp } from "react-icons/io5";
+import Link from "next/link";
 
 function SideMenu() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full flex-grow-0">
       <button
         data-drawer-target="default-sidebar"
         data-drawer-toggle="default-sidebar"
@@ -23,8 +24,8 @@ function SideMenu() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            clip-rule="evenodd"
-            fill-rule="evenodd"
+            clipRule="evenodd"
+            fillRule="evenodd"
             d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
           ></path>
         </svg>
@@ -35,57 +36,58 @@ function SideMenu() {
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="h-full px-6 py-8 overflow-y-auto">
           <ul className="space-y-2 font-medium">
             <li>
-              <a
-                href="#"
+              <Link href="/">
+                <SiWebmoney className="h-10 w-10 ml-6 mb-8" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <IoHomeSharp />
 
                 <span className="ms-3">Home</span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#"
+              <Link
+                href="/friends"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <FaUserFriends />
                 <span className="flex-1 ms-3 whitespace-nowrap">Friends</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/analytics"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <SiGoogleanalytics />
                 <span className="flex-1 ms-3 whitespace-nowrap">Analytics</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/profile"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <UserButton afterSignOutUrl="/" />
+                <UserButton />
                 <span className="flex-1 ms-3 whitespace-nowrap">Profile</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
+              <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                 <FaSignOutAlt />
-
                 <span className="flex-1 ms-3 whitespace-nowrap">
                   <SignOutButton />
                 </span>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
